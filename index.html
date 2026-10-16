@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trade With Munaaf</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Inter, Outfit & Telugu Font (Noto Sans Telugu) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons for crisp presentation -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1436432418685814');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
   <style>
     * {
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', 'Noto Sans Telugu', sans-serif;
       background-color: #030712;
       overflow-x: hidden;
     }
@@ -162,8 +178,8 @@
     <div class="neon-card-border px-4 py-4 sm:px-5 sm:py-5 flex flex-col items-center">
 
       <!-- ==========================================
-           TOP BRAND LOGO (CUSTOMIZE URL & LINK HERE)
-           ========================================== -->
+            TOP BRAND LOGO (CUSTOMIZE URL & LINK HERE)
+            ========================================== -->
       <a 
         id="brand-logo-link" 
         href="#" 
@@ -172,7 +188,6 @@
         title="Visit Brand Website"
         class="mb-2.5 transition-transform duration-300 hover:scale-105 active:scale-95 flex items-center justify-center"
       >
-        <!-- Paste your Brand Logo Image URL in src below -->
         <img
           id="brand-logo"
           src="https://placehold.co/120x34/040813/00f2fe?text=MUNAAF"
@@ -182,16 +197,11 @@
         />
       </a>
 
-      <!-- Profile Avatar with 2D Floating & Neon Pulsing Ring (95px - 100px) -->
+      <!-- Profile Avatar with 2D Floating & Neon Pulsing Ring -->
       <div class="relative float-anim mb-3 group cursor-pointer">
-        <!-- Ambient outer glow behind avatar -->
         <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-600 blur-sm opacity-70 group-hover:opacity-100 transition duration-400"></div>
 
-        <!-- Avatar container -->
         <div class="w-[92px] h-[92px] rounded-full overflow-hidden border-2 border-[#00f2fe] avatar-ring relative bg-slate-900 flex items-center justify-center">
-          <!-- ==========================================
-               AVATAR PROFILE PICTURE (CUSTOMIZE URL HERE)
-               ========================================== -->
           <img
             id="avatar-image"
             src="Munaaf.jpeg"
@@ -202,12 +212,12 @@
         </div>
       </div>
 
-      <!-- Main Title (Compact: ~1.15rem / 18.5px) -->
+      <!-- Main Title (Unchanged) -->
       <h1 class="font-brand text-[1.15rem] font-extrabold tracking-wider text-white text-center mb-3.5 uppercase drop-shadow-[0_2px_10px_rgba(0,210,255,0.45)] leading-tight">
         TRADE WITH MUNAAF
       </h1>
 
-      <!-- Features List with thin dividers (Compact font: ~0.85rem) -->
+      <!-- Features List in Telugu -->
       <div class="w-full space-y-0 mb-3.5">
         
         <!-- Item 1 -->
@@ -215,8 +225,8 @@
           <span class="text-base text-cyan-400 flex items-center justify-center w-6 shrink-0">
             🌐
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Learning & Educational Sessions
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            లెర్నింగ్ & ఎడ్యుకేషనల్ సెషన్స్
           </span>
         </div>
 
@@ -225,8 +235,8 @@
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             📊
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Market Concepts & Awareness
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            మార్కెట్ కాన్సెప్ట్స్ & అవగాహన
           </span>
         </div>
 
@@ -235,8 +245,8 @@
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             💎
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Chart Reading Concepts
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            చార్ట్ రీడింగ్ సూత్రాలు & పద్ధతులు
           </span>
         </div>
 
@@ -245,19 +255,19 @@
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             💻
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Educational Case Discussions
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            ఎడ్యుకేషనల్ కేస్ స్టడీ చర్చలు
           </span>
         </div>
 
       </div>
 
-      <!-- Tagline / Invitation text (~0.75rem) -->
-      <p class="text-slate-300 text-[0.76rem] text-center font-normal mb-3 leading-snug px-1">
-        Join our learning community and grow your knowledge
+      <!-- Tagline / Invitation text in Telugu -->
+      <p class="text-slate-300 text-[0.74rem] text-center font-normal mb-3 leading-snug px-1">
+        మా లెర్నింగ్ కమ్యూనిటీలో చేరి మీ మార్కెట్ పరిజ్ఞానాన్ని పెంచుకోండి
       </p>
 
-      <!-- Main CTA Button (Compact ~11px-12px padding, bold gradient, shimmer sweep) -->
+      <!-- Main CTA Button (Unchanged) -->
       <a
         id="telegramLink"
         href="https://t.me/+9yHZtGmdHmJlMTY1"
@@ -269,22 +279,22 @@
         <span>JOIN TELEGRAM</span>
       </a>
 
-      <!-- Motivational Quote in Hindi (~0.8rem) -->
-      <p class="text-slate-200 text-[0.78rem] text-center font-normal mb-3.5 px-2 leading-relaxed opacity-95">
-        "नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।"
+      <!-- Motivational Quote in Telugu -->
+      <p class="text-slate-200 text-[0.76rem] text-center font-normal mb-3.5 px-2 leading-relaxed opacity-95">
+        "మంచి ఉద్దేశం మరియు నిజాయితీతో కూడిన కష్టం ఉంటే విజయం తప్పక దక్కుతుంది."
       </p>
 
-      <!-- Legal / Meta Disclaimer Footer (~0.65rem) -->
+      <!-- Legal / Meta Disclaimer Footer in Telugu -->
       <footer class="w-full text-center text-[0.67rem] text-slate-500 space-y-1 pt-0.5">
         <div class="space-x-1.5 font-light">
-          <a href="#" class="hover:text-slate-400 transition">Terms</a>
+          <a href="#" class="hover:text-slate-400 transition">నిబంధనలు</a>
           <span>|</span>
-          <a href="#" class="hover:text-slate-400 transition">Privacy</a>
+          <a href="#" class="hover:text-slate-400 transition">గోప్యత</a>
           <span>|</span>
-          <a href="#" class="hover:text-slate-400 transition">Disclaimer</a>
+          <a href="#" class="hover:text-slate-400 transition">డిస్క్లైమర్</a>
         </div>
-        <p class="text-[0.63rem] text-slate-500/80 leading-tight">
-          This site is not part of Facebook™ or endorsed by Facebook™.
+        <p class="text-[0.61rem] text-slate-500/80 leading-tight">
+          ఈ వెబ్‌సైట్ Facebook™ లో భాగం కాదు లేదా Facebook™ ద్వారా ఆమోదించబడలేదు.
         </p>
       </footer>
 
@@ -293,9 +303,6 @@
 
   <!-- JavaScript for 2D Canvas Animations & Touch Feedback -->
   <script>
-    /* ========================================================
-       1. Ambient 2D Particle Canvas Animation (Neon Glow & Candles)
-       ======================================================== */
     const canvas = document.getElementById('ambientCanvas');
     const ctx = canvas.getContext('2d');
     let width, height;
@@ -308,7 +315,6 @@
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // 2D Floating glowing trading dots & upward arrows
     class Particle {
       constructor() {
         this.reset();
@@ -348,15 +354,12 @@
       }
     }
 
-    // Initialize 45 particles
     for (let i = 0; i < 45; i++) {
       particles.push(new Particle());
     }
 
     function animateLoop() {
       ctx.clearRect(0, 0, width, height);
-
-      // Draw subtle background radial gradient
       const bgGrad = ctx.createRadialGradient(
         width / 2, height / 2, 50,
         width / 2, height / 2, Math.max(width, height) * 0.7
@@ -366,7 +369,6 @@
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
-      // Render 2D particles
       particles.forEach(p => {
         p.update();
         p.draw();
@@ -379,9 +381,6 @@
       animateLoop();
     };
 
-    /* ========================================================
-       2. Tactile Button Ripple Effect (Touch and Mouse)
-       ======================================================== */
     const telegramBtn = document.getElementById('telegramLink');
     telegramBtn.addEventListener('click', function (e) {
       const rect = telegramBtn.getBoundingClientRect();
