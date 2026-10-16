@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trade With Munaaf</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Inter, Outfit & Telugu Font (Noto Sans Telugu) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Meta Pixel Code -->
@@ -35,7 +35,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       -webkit-tap-highlight-color: transparent;
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', 'Noto Sans Telugu', sans-serif;
       background-color: #030712;
       overflow-x: hidden;
     }
@@ -43,7 +43,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       font-family: 'Outfit', sans-serif;
     }
 
-    /* Ambient Glowing Neon Border - Compact */
+    /* Ambient Glowing Neon Border */
     .neon-card-border {
       position: relative;
       border: 1.5px solid #00d2ff;
@@ -55,7 +55,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       backdrop-filter: blur(12px);
     }
 
-    /* Avatar Glow Ring Animation - Compact */
+    /* Avatar Glow Ring Animation */
     .avatar-ring {
       box-shadow: 0 0 18px #00e5ff, 0 0 32px rgba(0, 229, 255, 0.45);
       animation: avatarPulse 3.5s ease-in-out infinite alternate;
@@ -175,7 +175,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       pointer-events: none;
     }
     .popup-content {
-      border: 1px solid rgba(0, 210, 255, 0.3);
+      border: 1px solid rgba(0, 210, 255, 0.35);
       box-shadow: 0 0 25px rgba(0, 210, 255, 0.25);
     }
   </style>
@@ -224,20 +224,20 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <!-- Main Title -->
+      <!-- Main Title (Unchanged) -->
       <h1 class="font-brand text-[1.15rem] font-extrabold tracking-wider text-white text-center mb-3.5 uppercase drop-shadow-[0_2px_10px_rgba(0,210,255,0.45)] leading-tight">
         TRADE WITH MUNAAF
       </h1>
 
-      <!-- Features List -->
+      <!-- Features List in Telugu -->
       <div class="w-full space-y-0 mb-3.5">
         
         <div class="feature-item py-2 flex items-center gap-2.5 border-b border-slate-700/50 cursor-pointer">
           <span class="text-base text-cyan-400 flex items-center justify-center w-6 shrink-0">
             🌐
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Learning & Educational Sessions
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            లెర్నింగ్ & ఎడ్యుకేషనల్ సెషన్స్
           </span>
         </div>
 
@@ -245,8 +245,8 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             📊
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Market Concepts & Awareness
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            మార్కెట్ కాన్సెప్ట్స్ & అవగాహన
           </span>
         </div>
 
@@ -254,8 +254,8 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             💎
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Chart Reading Concepts
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            చార్ట్ రీడింగ్ సూత్రాలు & పద్ధతులు
           </span>
         </div>
 
@@ -263,19 +263,19 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
           <span class="text-base flex items-center justify-center w-6 shrink-0">
             💻
           </span>
-          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
-            Educational Case Discussions
+          <span class="text-[0.82rem] font-medium text-slate-100 tracking-normal truncate">
+            ఎడ్యుకేషనల్ కేస్ స్టడీ చర్చలు
           </span>
         </div>
 
       </div>
 
-      <!-- Tagline -->
-      <p class="text-slate-300 text-[0.76rem] text-center font-normal mb-3 leading-snug px-1">
-        Join our learning community and grow your knowledge
+      <!-- Tagline in Telugu -->
+      <p class="text-slate-300 text-[0.74rem] text-center font-normal mb-3 leading-snug px-1">
+        మా లెర్నింగ్ కమ్యూనిటీలో చేరి మీ మార్కెట్ పరిజ్ఞానాన్ని పెంచుకోండి
       </p>
 
-      <!-- Main CTA Button -->
+      <!-- Main CTA Button (Unchanged) -->
       <a
         id="telegramLink"
         href="https://t.me/+9yHZtGmdHmJlMTY1"
@@ -287,22 +287,22 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
         <span>JOIN TELEGRAM</span>
       </a>
 
-      <!-- Motivational Quote -->
-      <p class="text-slate-200 text-[0.78rem] text-center font-normal mb-3.5 px-2 leading-relaxed opacity-95">
-        "नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।"
+      <!-- Motivational Quote in Telugu -->
+      <p class="text-slate-200 text-[0.76rem] text-center font-normal mb-3.5 px-2 leading-relaxed opacity-95">
+        "మంచి ఉద్దేశం మరియు నిజాయితీతో కూడిన కష్టం ఉంటే విజయం తప్పక దక్కుతుంది."
       </p>
 
-      <!-- Legal / Meta Disclaimer Footer (Buttons trigger Popup) -->
+      <!-- Legal / Meta Disclaimer Footer (Buttons trigger Telugu Popup) -->
       <footer class="w-full text-center text-[0.67rem] text-slate-500 space-y-1 pt-0.5">
         <div class="space-x-1.5 font-light">
-          <button type="button" onclick="openModal('terms')" class="hover:text-cyan-400 transition underline underline-offset-2">Terms</button>
+          <button type="button" onclick="openModal('terms')" class="hover:text-cyan-400 transition underline underline-offset-2">నిబంధనలు</button>
           <span>|</span>
-          <button type="button" onclick="openModal('privacy')" class="hover:text-cyan-400 transition underline underline-offset-2">Privacy</button>
+          <button type="button" onclick="openModal('privacy')" class="hover:text-cyan-400 transition underline underline-offset-2">గోప్యత</button>
           <span>|</span>
-          <button type="button" onclick="openModal('disclaimer')" class="hover:text-cyan-400 transition underline underline-offset-2">Disclaimer</button>
+          <button type="button" onclick="openModal('disclaimer')" class="hover:text-cyan-400 transition underline underline-offset-2">డిస్క్లైమర్</button>
         </div>
-        <p class="text-[0.63rem] text-slate-500/80 leading-tight">
-          This site is not part of Facebook™ or endorsed by Facebook™.
+        <p class="text-[0.61rem] text-slate-500/80 leading-tight">
+          ఈ వెబ్‌సైట్ Facebook™ లో భాగం కాదు లేదా Facebook™ ద్వారా ఆమోదించబడలేదు.
         </p>
       </footer>
 
@@ -310,7 +310,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
   </main>
 
   <!-- ==========================================
-       POPUP MODAL COMPONENT
+       POPUP MODAL COMPONENT (TELUGU)
        ========================================== -->
   <div id="legalModal" class="popup-modal hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
     <div class="popup-content bg-[#070d1e] w-full max-w-[340px] rounded-2xl p-5 text-left relative flex flex-col max-h-[80vh]">
@@ -318,16 +318,16 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       <!-- Modal Header -->
       <div class="flex items-center justify-between pb-3 border-b border-slate-700/60">
         <h3 id="modalTitle" class="font-brand font-bold text-base text-cyan-400 uppercase tracking-wide">
-          Terms of Use
+          నిబంధనలు & షరతులు
         </h3>
         <button type="button" onclick="closeModal()" class="text-slate-400 hover:text-white p-1 text-base transition">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <!-- Modal Body (Scrollable) -->
+      <!-- Modal Body (Scrollable, in Telugu) -->
       <div id="modalBody" class="py-3.5 text-xs text-slate-300 overflow-y-auto leading-relaxed space-y-2 select-text">
-        <!-- Content will be injected dynamically -->
+        <!-- Content injected dynamically -->
       </div>
 
       <!-- Modal Footer -->
@@ -337,7 +337,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
           onclick="closeModal()" 
           class="px-4 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 text-xs font-medium transition"
         >
-          Close
+          మూసివేయి (Close)
         </button>
       </div>
 
@@ -453,7 +453,7 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
     });
 
     /* ========================================================
-       3. Popup Modal Logic (Terms, Privacy, Disclaimer)
+       3. Popup Modal Logic (Telugu Content)
        ======================================================== */
     const legalModal = document.getElementById('legalModal');
     const modalTitle = document.getElementById('modalTitle');
@@ -461,27 +461,27 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
 
     const modalData = {
       terms: {
-        title: "Terms & Conditions",
+        title: "నిబంధనలు & షరతులు (Terms)",
         content: `
-          <p>Welcome to <strong>Trade With Munaaf</strong>. By accessing our platform, website, or community channels, you agree to these terms.</p>
-          <p>All materials and information shared are strictly for educational and informational purposes only. We do not provide financial, investment, or advisory services.</p>
-          <p>Unauthorized reproduction, redistribution, or resale of shared content is strictly prohibited.</p>
+          <p><strong>Trade With Munaaf</strong> ప్లాట్‌ఫారమ్‌కు స్వాగతం. మా వెబ్‌సైట్ లేదా కమ్యూనిటీ ఛానల్స్‌ను ఉపయోగించడం ద్వారా మీరు ఈ క్రింది నిబంధనలకు అంగీకరిస్తున్నారు.</p>
+          <p>మా ఛానల్ మరియు వెబ్‌సైట్ ద్వారా అందించబడే మొత్తం సమాచారం పూర్తిగా <strong>కేవలం విద్యా మరియు సమాచార ప్రయోజనాల (Educational Purposes)</strong> కోసం మాత్రమే. మేము ఎటువంటి ఆర్థిక లేదా పెట్టుబడి సలహాలను అందించము.</p>
+          <p>ఇక్కడ పంచుకున్న కంటెంట్‌ను అనుమతి లేకుండా కాపీ చేయడం లేదా రీసేల్ చేయడం నిషేధించబడింది.</p>
         `
       },
       privacy: {
-        title: "Privacy Policy",
+        title: "గోప్యతా విధానం (Privacy Policy)",
         content: `
-          <p>We respect your privacy. Any information you provide or interactions you have within our community are kept confidential.</p>
-          <p>We do not sell, rent, or trade your personal data to third parties. We use basic standard metrics only to optimize site performance and user experience.</p>
-          <p>For any questions or data concerns, feel free to contact us via our official Telegram channel.</p>
+          <p>మీ గోప్యతను మేము గౌరవిస్తాము. మా కమ్యూనిటీలో మీరు పంచుకునే ఎలాంటి వ్యక్తిగత వివరాలైనా అత్యంత సురక్షితంగా ఉంటాయి.</p>
+          <p>మేము మీ సమాచారాన్ని ఏ ఇతర మూడో పక్షానికి (Third-party) విక్రయించము లేదా దుర్వినియోగం చేయము.</p>
+          <p>మీకు ఏవైనా ప్రశ్నలు ఉంటే మా అధికారిక టెలిగ్రామ్ ఛానల్ ద్వారా మమ్మల్ని సంప్రదించవచ్చు.</p>
         `
       },
       disclaimer: {
-        title: "Disclaimer",
+        title: "రిస్క్ డిస్క్లైమర్ (Disclaimer)",
         content: `
-          <p><strong>Risk Warning:</strong> Trading in financial markets (stocks, crypto, forex, commodities) involves substantial risk of loss and is not suitable for every individual.</p>
-          <p>We are <strong>NOT SEBI registered advisors</strong> or licensed financial consultants. Past performance is no guarantee of future results.</p>
-          <p>Please consult a certified financial advisor before making any financial or investment decisions.</p>
+          <p><strong>రిస్క్ హెచ్చరిక:</strong> స్టాక్ మార్కెట్ మరియు ఆర్థిక ట్రేడింగ్‌లో రిస్క్ ఉంటుంది. ఇది అందరికీ అనుకూలం కాకపోవచ్చు.</p>
+          <p>మేము <strong>SEBI రిజిస్టర్డ్ సలహాదారులం కాము</strong>. గత పనితీరు భవిష్యత్ లాభాలకు హామీ ఇవ్వదు.</p>
+          <p>ఎలాంటి ఆర్థిక నిర్ణయాలు లేదా పెట్టుబడులు పెట్టే ముందు మీ సర్టిఫైడ్ ఫైనాన్షియల్ అడ్వైజర్‌ను సంప్రదించండి.</p>
         `
       }
     };
@@ -498,14 +498,14 @@ src="https://www.facebook.com/tr?id=1436432418685814&ev=PageView&noscript=1"
       legalModal.classList.add('hidden');
     }
 
-    // Close when clicking outside modal box
+    // Backdrop click close
     legalModal.addEventListener('click', function (e) {
       if (e.target === legalModal) {
         closeModal();
       }
     });
 
-    // Close on Escape key press
+    // Esc key close
     window.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !legalModal.classList.contains('hidden')) {
         closeModal();
