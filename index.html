@@ -1,106 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Master the Market – Beginner's Guide</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade With Munaaf</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons for crisp presentation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Master the Market – Beginner's Guide">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop">
-
-  <!-- Minimal CSS (inline for speed) -->
   <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #00ff99;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #030712;
+      overflow-x: hidden;
     }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
+    .font-brand {
+      font-family: 'Outfit', sans-serif;
     }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
+
+    /* Ambient Glowing Neon Border - Compact */
+    .neon-card-border {
+      position: relative;
+      border: 1.5px solid #00d2ff;
+      box-shadow: 0 0 12px rgba(0, 210, 255, 0.4),
+                  0 0 25px rgba(0, 210, 255, 0.18),
+                  inset 0 0 12px rgba(0, 210, 255, 0.12);
+      border-radius: 28px;
+      background: radial-gradient(circle at 50% 8%, rgba(0, 180, 255, 0.08) 0%, rgba(4, 8, 19, 0.97) 65%);
+      backdrop-filter: blur(12px);
     }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
+
+    /* Avatar Glow Ring Animation - Compact */
+    .avatar-ring {
+      box-shadow: 0 0 18px #00e5ff, 0 0 32px rgba(0, 229, 255, 0.45);
+      animation: avatarPulse 3.5s ease-in-out infinite alternate;
     }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
+
+    @keyframes avatarPulse {
+      0% {
+        box-shadow: 0 0 14px #00d2ff, 0 0 24px rgba(0, 210, 255, 0.35);
+        transform: scale(1);
+      }
+      100% {
+        box-shadow: 0 0 22px #00f2fe, 0 0 38px rgba(0, 242, 254, 0.55);
+        transform: scale(1.02);
+      }
     }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
+
+    /* Floating 2D motion */
+    .float-anim {
+      animation: floating 3.6s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    /* Button Gradient & Glow Animation */
+    .btn-gradient {
+      background: linear-gradient(90deg, #00c6ff 0%, #0072ff 50%, #9b51e0 100%);
+      background-size: 200% auto;
+      box-shadow: 0 0 18px rgba(0, 180, 255, 0.5), 0 6px 18px rgba(155, 81, 224, 0.35);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: shimmerBtn 3.5s linear infinite;
+    }
+    .btn-gradient:hover, .btn-gradient:active {
+      transform: translateY(-1.5px) scale(1.01);
+      box-shadow: 0 0 28px rgba(0, 220, 255, 0.75), 0 8px 22px rgba(155, 81, 224, 0.5);
+    }
+
+    @keyframes shimmerBtn {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Shimmer Overlay on CTA Button */
+    .btn-shine-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shine-effect::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -100%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(25deg);
+      animation: btnShine 2.8s infinite;
+    }
+    @keyframes btnShine {
+      0% { left: -100%; }
+      35%, 100% { left: 180%; }
+    }
+
+    /* Staggered list items */
+    .feature-item {
+      transition: all 0.2s ease;
+    }
+    .feature-item:hover {
+      transform: translateX(3px);
+    }
+
+    /* Ambient 2D Canvas background */
+    #ambientCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ripple tap effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: rippleEffect 0.55s linear;
+      background-color: rgba(255, 255, 255, 0.45);
+      pointer-events: none;
+    }
+    @keyframes rippleEffect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
-<body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Master the Market – Beginner's Guide</h1>
-    <p class="sub">Understand charts & risk before trading</p>
+<body class="min-h-screen text-white flex items-center justify-center p-2.5 sm:p-4 relative select-none">
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+  <!-- Interactive 2D Floating Market / Neon Bokeh Particles Canvas -->
+  <canvas id="ambientCanvas"></canvas>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+  <!-- Mobile-first Compact Outer Wrapper (340px - 360px) -->
+  <main class="w-full max-w-[350px] relative z-10 my-auto">
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp43.html" rel="nofollow">Start Learning</a>
+    <!-- Glowing Phone-style Neon Card -->
+    <div class="neon-card-border px-4 py-4 sm:px-5 sm:py-5 flex flex-col items-center">
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+      <!-- ==========================================
+           TOP BRAND LOGO (CUSTOMIZE URL & LINK HERE)
+           ========================================== -->
+      <a 
+        id="brand-logo-link" 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        title="Visit Brand Website"
+        class="mb-2.5 transition-transform duration-300 hover:scale-105 active:scale-95 flex items-center justify-center"
+      >
+        <!-- Paste your Brand Logo Image URL in src below -->
+        <img
+          id="brand-logo"
+          src="https://placehold.co/120x34/040813/00f2fe?text=MUNAAF+FX"
+          alt="Brand Logo"
+          class="h-7 w-auto object-contain drop-shadow-[0_0_8px_rgba(0,242,254,0.6)]"
+          onerror="this.src='https://placehold.co/120x34/040813/00f2fe?text=LOGO';"
+        />
+      </a>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+      <!-- Profile Avatar with 2D Floating & Neon Pulsing Ring (95px - 100px) -->
+      <div class="relative float-anim mb-3 group cursor-pointer">
+        <!-- Ambient outer glow behind avatar -->
+        <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-600 blur-sm opacity-70 group-hover:opacity-100 transition duration-400"></div>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
+        <!-- Avatar container -->
+        <div class="w-[92px] h-[92px] rounded-full overflow-hidden border-2 border-[#00f2fe] avatar-ring relative bg-slate-900 flex items-center justify-center">
+          <!-- ==========================================
+               AVATAR PROFILE PICTURE (CUSTOMIZE URL HERE)
+               ========================================== -->
+          <img
+            id="avatar-image"
+            src="Munaaf.jpeg"
+            alt="Munaaf - Trade With Munaaf"
+            class="w-full h-full object-cover object-top transition duration-400 group-hover:scale-105"
+            onerror="this.src='https://placehold.co/200x200/0f172a/00f2fe?text=MUNAAF';"
+          />
+        </div>
+      </div>
+
+      <!-- Main Title (Compact: ~1.15rem / 18.5px) -->
+      <h1 class="font-brand text-[1.15rem] font-extrabold tracking-wider text-white text-center mb-3.5 uppercase drop-shadow-[0_2px_10px_rgba(0,210,255,0.45)] leading-tight">
+        TRADE WITH MUNAAF
+      </h1>
+
+      <!-- Features List with thin dividers (Compact font: ~0.85rem) -->
+      <div class="w-full space-y-0 mb-3.5">
+        
+        <!-- Item 1 -->
+        <div class="feature-item py-2 flex items-center gap-2.5 border-b border-slate-700/50 cursor-pointer">
+          <span class="text-base text-cyan-400 flex items-center justify-center w-6 shrink-0">
+            🌐
+          </span>
+          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
+            Learning & Educational Sessions
+          </span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="feature-item py-2 flex items-center gap-2.5 border-b border-slate-700/50 cursor-pointer">
+          <span class="text-base flex items-center justify-center w-6 shrink-0">
+            📊
+          </span>
+          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
+            Market Concepts & Awareness
+          </span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="feature-item py-2 flex items-center gap-2.5 border-b border-slate-700/50 cursor-pointer">
+          <span class="text-base flex items-center justify-center w-6 shrink-0">
+            💎
+          </span>
+          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
+            Chart Reading Concepts
+          </span>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="feature-item py-2 flex items-center gap-2.5 border-b border-slate-700/50 cursor-pointer">
+          <span class="text-base flex items-center justify-center w-6 shrink-0">
+            💻
+          </span>
+          <span class="text-[0.84rem] font-medium text-slate-100 tracking-normal truncate">
+            Educational Case Discussions
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Tagline / Invitation text (~0.75rem) -->
+      <p class="text-slate-300 text-[0.76rem] text-center font-normal mb-3 leading-snug px-1">
+        Join our learning community and grow your knowledge
+      </p>
+
+      <!-- Main CTA Button (Compact ~11px-12px padding, bold gradient, shimmer sweep) -->
+      <a
+        id="telegramLink"
+        href="https://t.me/+9yHZtGmdHmJlMTY1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gradient btn-shine-effect w-full py-2.5 rounded-full font-brand text-[0.95rem] font-black tracking-wider uppercase text-center text-white mb-3 flex items-center justify-center gap-2 relative shadow-md"
+      >
+        <i class="fa-brands fa-telegram text-lg"></i>
+        <span>JOIN TELEGRAM</span>
+      </a>
+
+      <!-- Motivational Quote in Hindi (~0.8rem) -->
+      <p class="text-slate-200 text-[0.78rem] text-center font-normal mb-3.5 px-2 leading-relaxed opacity-95">
+        "नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।"
+      </p>
+
+      <!-- Legal / Meta Disclaimer Footer (~0.65rem) -->
+      <footer class="w-full text-center text-[0.67rem] text-slate-500 space-y-1 pt-0.5">
+        <div class="space-x-1.5 font-light">
+          <a href="#" class="hover:text-slate-400 transition">Terms</a>
+          <span>|</span>
+          <a href="#" class="hover:text-slate-400 transition">Privacy</a>
+          <span>|</span>
+          <a href="#" class="hover:text-slate-400 transition">Disclaimer</a>
+        </div>
+        <p class="text-[0.63rem] text-slate-500/80 leading-tight">
+          This site is not part of Facebook™ or endorsed by Facebook™.
+        </p>
+      </footer>
+
+    </div>
   </main>
 
+  <!-- JavaScript for 2D Canvas Animations & Touch Feedback -->
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    /* ========================================================
+       1. Ambient 2D Particle Canvas Animation (Neon Glow & Candles)
+       ======================================================== */
+    const canvas = document.getElementById('ambientCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // 2D Floating glowing trading dots & upward arrows
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height + height * 0.1;
+        this.size = Math.random() * 2.2 + 0.8;
+        this.speedY = Math.random() * 0.6 + 0.2;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.opacity = Math.random() * 0.45 + 0.1;
+        this.fadeSpeed = Math.random() * 0.005 + 0.002;
+        this.isCyan = Math.random() > 0.3;
+      }
+      update() {
+        this.y -= this.speedY;
+        this.x += this.speedX;
+        this.opacity += this.fadeSpeed;
+        if (this.opacity > 0.6 || this.opacity < 0.1) {
+          this.fadeSpeed = -this.fadeSpeed;
+        }
+        if (this.y < -10) {
+          this.reset();
+          this.y = height + 10;
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.isCyan 
+          ? `rgba(0, 220, 255, ${this.opacity})` 
+          : `rgba(168, 85, 247, ${this.opacity * 0.8})`;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.isCyan ? '#00d2ff' : '#9333ea';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // Initialize 45 particles
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateLoop() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw subtle background radial gradient
+      const bgGrad = ctx.createRadialGradient(
+        width / 2, height / 2, 50,
+        width / 2, height / 2, Math.max(width, height) * 0.7
+      );
+      bgGrad.addColorStop(0, 'rgba(0, 50, 80, 0.12)');
+      bgGrad.addColorStop(1, 'rgba(3, 7, 18, 0)');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, width, height);
+
+      // Render 2D particles
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      requestAnimationFrame(animateLoop);
+    }
+
+    window.onload = function() {
+      animateLoop();
+    };
+
+    /* ========================================================
+       2. Tactile Button Ripple Effect (Touch and Mouse)
+       ======================================================== */
+    const telegramBtn = document.getElementById('telegramLink');
+    telegramBtn.addEventListener('click', function (e) {
+      const rect = telegramBtn.getBoundingClientRect();
+      const circle = document.createElement('span');
+      const diameter = Math.max(rect.width, rect.height);
+      const radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${(e.clientX || (rect.left + rect.width / 2)) - rect.left - radius}px`;
+      circle.style.top = `${(e.clientY || (rect.top + rect.height / 2)) - rect.top - radius}px`;
+      circle.classList.add('ripple');
+
+      const existingRipple = telegramBtn.querySelector('.ripple');
+      if (existingRipple) {
+        existingRipple.remove();
+      }
+
+      telegramBtn.appendChild(circle);
+      setTimeout(() => circle.remove(), 600);
+    });
   </script>
 </body>
 </html>
